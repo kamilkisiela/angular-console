@@ -196,6 +196,10 @@ module.exports = {
         affected: affected('lint --fix')
       }
     },
+    graphql: {
+      validate: 'graphql-inspector validate "./libs/!(server)/**/*.graphql" ./libs/server/src/assets/schema.graphql',
+      coverage: 'graphql-inspector coverage "./libs/!(server)/**/*.graphql" ./libs/server/src/assets/schema.graphql'
+    },
     build: {
       default: 'nx affected:build --all --parallel',
       affected: affected('build'),
